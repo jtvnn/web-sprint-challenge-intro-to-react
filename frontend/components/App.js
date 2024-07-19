@@ -32,7 +32,7 @@ function App() {
     let res = {
       ...person,
       homeworld: people.map(id => {
-        let homeworld = planets.find(planetObj => planetObj.id === id);
+        let homeworld = planets.find(planetObj => planetObj.id === person.homeworld).name
         return `${homeworld}`;
       })
     }
@@ -50,7 +50,6 @@ function App() {
         key={merge.id} 
         name={merge.name} 
         home={merge.homeworld} />)}
-      
     </div>
   )
 }
